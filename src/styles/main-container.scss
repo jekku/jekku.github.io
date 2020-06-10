@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Nunito');
+
+$nunito: 'Nunito', serif;
+$roboto: 'Roboto', sans-serif;
+$screen-sm-min: 1024px;
+$tablet: '(max-width: #{$screen-sm-min})';
+
+$jekrio-bg: #042434;
+$jekrio-text: #bfddde;
+$jekrio-highlight: #228693;
+
+.main-container {
+  margin-left: 96px;
+  width: 32em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  > .heading {
+    font-size: 32px;
+    font-family: $nunito;
+    text-rendering: optimizeLegibility;
+    color: $jekrio-text;
+  }
+
+  > .contents > p {
+    font-family: $roboto;
+    text-rendering: optimizeLegibility;
+    font-size: 18px;
+    color: $jekrio-text;
+  }
+
+  > .contents > p > a {
+    text-decoration: none;
+    color: $jekrio-highlight;
+    line-height: 1.6em;
+  }
+
+  > .contents > p > a:visited {
+    color: $jekrio-highlight;
+  }
+}
+
+@media #{$tablet} {
+  .main-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
